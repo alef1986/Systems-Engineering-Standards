@@ -1,0 +1,6 @@
+<archimate:ArchimateModel
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="System and Software Engineering Standards"
+    id="f29d6443-86f3-4938-a117-ca42f5e0e61f"
+    purpose="Das ist ein Hilfsmittel für Systems- und Softwareengineering-Normen. Es enthällt überblick der relevanten Normen.&#xD;&#xA;&#xD;&#xA;Anwendungsfälle:&#xD;&#xA;- Benutzer will Beschreibung der Norm auf der Website des Erstellers lesen&#xD;&#xA;- Benutzer will wissen, ob die Norm in der MHP-Bibliothek greifbar ist und - falls ja - die PDF-Datei bekommen&#xD;&#xA;- Benutzer will wissen, welche Normen zu welchen Themen im Umfeld es gibt&#xD;&#xA;&#xD;&#xA;Wie man das anwendet:&#xD;&#xA;1. &quot;Model Tree -> System and Software Engineering Standards -> Views&quot; öffnen&#xD;&#xA;2. Passende Kategorie öffnen&#xD;&#xA;3. View auswählen&#xD;&#xA;&#xD;&#xA;Einschränkungen:&#xD;&#xA;- Hilfsmittel enthällt nur internationale industrieübergreifende Normen. Industriespezifische Normen sind außer Rahmen des Hilfsmittels&#xD;&#xA;&#xD;&#xA;Diese Ansicht wurde am 25.02.2020 erstellt.&#xD;&#xA;Ersteller: alexander.efremov@mhp.com"
+    version="4.6.0"/>
