@@ -1,0 +1,775 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>System and Software Engineering Standards</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>System and Software Engineering Standards</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none">It is a tool for systems and software engineering standards. It contains an overview of the relevant standards.
+
+Use cases:
+- User wants to read description of the standard on the website of the creator
+- User wants to know which standards exist on which topics in the environment
+
+This view was created on February 25th, 2020 and updated on March 26th, 2020.
+Creator: alexander.efremoff@gmail.com</textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"f29d6443-86f3-4938-a117-ca42f5e0e61f", type:"ArchimateModel", name:decodeURL("System+and+Software+Engineering+Standards"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"dc9e0b09-e8ec-40b3-ae42-2666280aa83e", contenttype:"Folder"});
+								dataFolders.push({id:"dc9e0b09-e8ec-40b3-ae42-2666280aa83e", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contenttype:"Folder"});
+								dataFolders.push({id:"0b49175a-1ea9-431d-b985-f3d95e6237a2", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", contenttype:"Representation"});
+										dataElements.push({id:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748%3A2018+Systems+and+software+engineering+%E2%80%94+Life+cycle+management"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"0679a3dd-85c6-4031-987b-7b1582de2503", contenttype:"Representation"});
+										dataElements.push({id:"0679a3dd-85c6-4031-987b-7b1582de2503", type:"Representation", name:decodeURL("ISO%2FIEC+26560%3A2019+Software+and+systems+engineering+%E2%80%94+Tools+and+methods+for+product+line+product+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43119.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"083f4a41-6849-4887-864f-781546f11920", contenttype:"Representation"});
+										dataElements.push({id:"083f4a41-6849-4887-864f-781546f11920", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+21841%3A2019+Systems+and+software+engineering+%E2%80%94+Taxonomy+of+systems+of+systems"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F71957.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"0ecfc340-d071-4934-92c4-05a45e907db1", contenttype:"Representation"});
+										dataElements.push({id:"0ecfc340-d071-4934-92c4-05a45e907db1", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+29119-2%3A2013+Software+and+systems+engineering+%E2%80%94+Software+testing+%E2%80%94+Part+2%3A+Test+processes"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F56736.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"121c6c07-4f0f-4f80-981b-8a094d8137b4", contenttype:"Representation"});
+										dataElements.push({id:"121c6c07-4f0f-4f80-981b-8a094d8137b4", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+15939%3A2017+Systems+and+software+engineering+%E2%80%94+Measurement+process"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F71197.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"12e78967-aa6f-4b30-9175-e4f70554db5b", contenttype:"Representation"});
+										dataElements.push({id:"12e78967-aa6f-4b30-9175-e4f70554db5b", type:"Representation", name:decodeURL("ISO%2FIEC+26561%3A2019+Software+and+systems+engineering+%E2%80%94+Methods+and+tools+for+product+line+technical+probe"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43120.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"13b9a07b-5287-4726-8e42-2d8d5ccc07b0", contenttype:"Representation"});
+										dataElements.push({id:"13b9a07b-5287-4726-8e42-2d8d5ccc07b0", type:"Representation", name:decodeURL("*****+Archtecture+Engineering"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"1d14129b-bcda-4f80-8b13-ad0417051ba9", contenttype:"Representation"});
+										dataElements.push({id:"1d14129b-bcda-4f80-8b13-ad0417051ba9", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+42030%3A2019+Software%2C+systems+and+enterprise+%E2%80%94+Architecture+evaluation+framework"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F73436.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"1e31670d-0024-437d-bd2f-730241938136", contenttype:"Representation"});
+										dataElements.push({id:"1e31670d-0024-437d-bd2f-730241938136", type:"Representation", name:decodeURL("ISO%2FIEC+TR+24774%3A2010+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Guidelines+for+process+description"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F53815.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"1e35da39-0b34-4685-adcc-132a75cf3696", contenttype:"Representation"});
+										dataElements.push({id:"1e35da39-0b34-4685-adcc-132a75cf3696", type:"Representation", name:decodeURL("ISO%2FIEC+26555%3A2015+Software+and+systems+engineering+%E2%80%94+Tools+and+methods+for+product+line+technical+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F69531.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"1e62a0b6-e429-473b-af64-e22548dfe824", contenttype:"Representation"});
+										dataElements.push({id:"1e62a0b6-e429-473b-af64-e22548dfe824", type:"Representation", name:decodeURL("ISO%2FIEC+TS+33030%3A2017+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+An+exemplar+documented+assessment+process"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F55121.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"207c8877-ea22-4d87-85de-bd11a471f7cf", contenttype:"Representation"});
+										dataElements.push({id:"207c8877-ea22-4d87-85de-bd11a471f7cf", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+21840%3A2019+Systems+and+software+engineering+%E2%80%94+Guidelines+for+the+utilization+of+ISO%2FIEC%2FIEEE+15288+in+the+context+of+system+of+systems+%28SoS%29"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F71956.html%0D%0A%0D%0ABei+MHP%0D%0Ahttps%3A%2F%2Fsharepoint.mymhp.net%2Fpc%2Flearning%2F_layouts%2F15%2Flistform.aspx%3FPageType%3D4%26ListId%3D%257B78B30685%252DC646%252D4E6D%252DAFE4%252DB98B2897A17B%257D%26ID%3D806%26ContentTypeID%3D0x01004B5B0ECC03BD144C81E2670A9A6B0B58")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"20a13af3-a6b9-45bf-a418-a26d9100db4c", contenttype:"Representation"});
+										dataElements.push({id:"20a13af3-a6b9-45bf-a418-a26d9100db4c", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+15288%3A2015+Systems+and+software+engineering+%E2%80%94+System+life+cycle+processes"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F63711.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"234a978f-037a-4950-9f13-0b9adf9ab274", contenttype:"Representation"});
+										dataElements.push({id:"234a978f-037a-4950-9f13-0b9adf9ab274", type:"Representation", name:decodeURL("ISO+270**+-+Systems+and+Software+Security"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F73436.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"28c2f6d9-2642-4b0c-ad9c-ba50f12488e2", contenttype:"Representation"});
+										dataElements.push({id:"28c2f6d9-2642-4b0c-ad9c-ba50f12488e2", type:"Representation", name:decodeURL("ISO%2FIEC+15504-6%3A2013+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Part+6%3A+An+exemplar+system+life+cycle+process+assessment+model"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F61492.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"35c71b52-9afb-4607-85da-cfb24d9d623d", contenttype:"Representation"});
+										dataElements.push({id:"35c71b52-9afb-4607-85da-cfb24d9d623d", type:"Representation", name:decodeURL("ISO%2FIEC+TR+19759%3A2015+Software+Engineering+%E2%80%94+Guide+to+the+software+engineering+body+of+knowledge+%28SWEBOK%29"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"3ab34700-c061-49eb-9e02-123a0b49f582", contenttype:"Representation"});
+										dataElements.push({id:"3ab34700-c061-49eb-9e02-123a0b49f582", type:"Representation", name:decodeURL("ISO%2FIEC+TS+15504-8%3A2012+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Part+8%3A+An+exemplar+process+assessment+model+for+IT+service+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F50625.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"3f7ff739-73eb-4c6e-9413-9c57340ed225", contenttype:"Representation"});
+										dataElements.push({id:"3f7ff739-73eb-4c6e-9413-9c57340ed225", type:"Representation", name:decodeURL("ISO+26262-11%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+11%3A+Guidelines+on+application+of+ISO+26262+to+semiconductors"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F69604.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"4339d8d3-158e-4b28-84b4-b436f309abbd", contenttype:"Representation"});
+										dataElements.push({id:"4339d8d3-158e-4b28-84b4-b436f309abbd", type:"Representation", name:decodeURL("ISO%2FPAS+21448%3A2019+Road+vehicles+%E2%80%94+Safety+of+the+intended+functionality"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F70939.html%0D%0A")});
+													dataProperties.push({conceptid:"4339d8d3-158e-4b28-84b4-b436f309abbd", propkey:decodeURL("ELib"), propvalue:decodeURL("false")});
+
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"48d379d9-2d25-40b4-90e4-ade3b2afa07a", contenttype:"Representation"});
+										dataElements.push({id:"48d379d9-2d25-40b4-90e4-ade3b2afa07a", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+42020%3A2019+Software%2C+systems+and+enterprise+%E2%80%94+Architecture+processes"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68982.html")});
+													dataProperties.push({conceptid:"48d379d9-2d25-40b4-90e4-ade3b2afa07a", propkey:decodeURL("ELib"), propvalue:decodeURL("false")});
+
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"4aac85e1-a747-462e-ad65-7d7050afb3dd", contenttype:"Representation"});
+										dataElements.push({id:"4aac85e1-a747-462e-ad65-7d7050afb3dd", type:"Representation", name:decodeURL("ISO%2FIEC+26554%3A2018+Information+technology+%E2%80%94+Software+and+systems+engineering+%E2%80%94+Tools+and+methods+for+product+line+testing"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43113.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"4c4ad222-017b-4c7a-85f1-f0313e159a73", contenttype:"Representation"});
+										dataElements.push({id:"4c4ad222-017b-4c7a-85f1-f0313e159a73", type:"Representation", name:decodeURL("Systems+Engineering+Body+of+Knowledge+%28aligned+with%2C+but+not+ISO+document%29"), documentation:decodeURL("https%3A%2F%2Fwww.sebokwiki.org%2Fwiki%2FDownload_SEBoK_PDF%0D%0Ahttps%3A%2F%2Fwww.sebokwiki.org%2F")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"4e70217e-01d7-4abf-8521-3fea45b814ec", contenttype:"Representation"});
+										dataElements.push({id:"4e70217e-01d7-4abf-8521-3fea45b814ec", type:"Representation", name:decodeURL("ISO%2FIEC+26559%3A2017+Software+and+systems+engineering+%E2%80%94+Methods+and+tools+for+variability+traceability+in+software+and+systems+product+line"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43118.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"52a6a969-bb1e-42ca-b446-f079f157fe69", contenttype:"Representation"});
+										dataElements.push({id:"52a6a969-bb1e-42ca-b446-f079f157fe69", type:"Representation", name:decodeURL("ISO%2FIEC+26553%3A2018+Information+technology+%E2%80%94+Software+and+systems+engineering+%E2%80%94+Tools+and+methods+for+product+line+realization"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43112.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"52b0a285-fca5-42ae-9210-a89ece094cce", contenttype:"Representation"});
+										dataElements.push({id:"52b0a285-fca5-42ae-9210-a89ece094cce", type:"Representation", name:decodeURL("ISO%2FIEC+TR+33014%3A2013+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Guide+for+process+improvement"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F54186.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"55cdc31f-e671-4a97-b313-e3684489dfe1", contenttype:"Representation"});
+										dataElements.push({id:"55cdc31f-e671-4a97-b313-e3684489dfe1", type:"Representation", name:decodeURL("ISO+26262+Road+vehicles+%E2%80%94+Functional+safety"), documentation:decodeURL("https%3A%2F%2Fsharepoint.mymhp.net%2Fpc%2Flearning%2FLists%2FLernmaterial%2FDispForm.aspx%3FID%3D742")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"560b3e2b-f7f7-4a72-8fe2-53231c8884a7", contenttype:"Representation"});
+										dataElements.push({id:"560b3e2b-f7f7-4a72-8fe2-53231c8884a7", type:"Representation", name:decodeURL("ISO%2FIEC+26562%3A2019+Software+and+systems+engineering+%E2%80%94+Methods+and+tools+for+product+line+transition+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43121.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"5a558e1b-9ea6-4f48-8bec-cda831f857e0", contenttype:"Representation"});
+										dataElements.push({id:"5a558e1b-9ea6-4f48-8bec-cda831f857e0", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+42010%3A2011+Systems+and+software+engineering+%E2%80%94+Architecture+description"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F50508.html")});
+													dataProperties.push({conceptid:"5a558e1b-9ea6-4f48-8bec-cda831f857e0", propkey:decodeURL("ELib"), propvalue:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"5aa91705-a7b0-4dcd-ba3a-334ad6ebb5f6", contenttype:"Representation"});
+										dataElements.push({id:"5aa91705-a7b0-4dcd-ba3a-334ad6ebb5f6", type:"Representation", name:decodeURL("ISO+26262-8%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+8%3A+Supporting+processes"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68390.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"5be243b7-8f06-44cf-b0ee-aaddb70dfe10", contenttype:"Representation"});
+										dataElements.push({id:"5be243b7-8f06-44cf-b0ee-aaddb70dfe10", type:"Representation", name:decodeURL("ISO%2FIEC+33003%3A2015+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Requirements+for+process+measurement+frameworks"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F54177.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"5da3ce95-faac-4378-aa42-17dbd6c1c14c", contenttype:"Representation"});
+										dataElements.push({id:"5da3ce95-faac-4378-aa42-17dbd6c1c14c", type:"Representation", name:decodeURL("INCOSE+Systems+Engineering+Handbook+v.+4"), documentation:decodeURL("not+an+ISO+standard%2C+aligned+with+ISO+15288%0D%0Ahttps%3A%2F%2Fwww.gfse-handbuch.de%2F1%2Fincose-systems-engineering-handbuch")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"5eef100a-8782-4b46-9e4c-95c95daf1a94", contenttype:"Representation"});
+										dataElements.push({id:"5eef100a-8782-4b46-9e4c-95c95daf1a94", type:"Representation", name:decodeURL("ISO+26262-10%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+10%3A+Guidelines+on+ISO+26262"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68392.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"6356b8bb-4cde-4ffd-96a5-a5c413a18559", contenttype:"Representation"});
+										dataElements.push({id:"6356b8bb-4cde-4ffd-96a5-a5c413a18559", type:"Representation", name:decodeURL("ISO+26262-2%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+2%3A+Management+of+functional+safety"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68384.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"67455c6f-5744-4af7-bbeb-354aa05ec665", contenttype:"Representation"});
+										dataElements.push({id:"67455c6f-5744-4af7-bbeb-354aa05ec665", type:"Representation", name:decodeURL("ISO%2FIEC+TR+24748-3%3A2011+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+3%3A+Guide+to+the+application+of+ISO%2FIEC+12207+%28Software+life+cycle+processes%29"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F70816.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"68488f7f-a4d2-4496-8ecd-a8c2b958d5e5", contenttype:"Representation"});
+										dataElements.push({id:"68488f7f-a4d2-4496-8ecd-a8c2b958d5e5", type:"Representation", name:decodeURL("ISO%2FIEC+15504-5%3A2012+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Part+5%3A+An+exemplar+software+life+cycle+process+assessment+model"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F60555.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"6a227850-dcb0-4531-b185-f11b9b263bb0", contenttype:"Representation"});
+										dataElements.push({id:"6a227850-dcb0-4531-b185-f11b9b263bb0", type:"Representation", name:decodeURL("ISO+26262-5%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+5%3A+Product+development+at+the+hardware+level"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68387.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"6c1bfea6-5b97-4f4a-abc2-a57ad06d9287", contenttype:"Representation"});
+										dataElements.push({id:"6c1bfea6-5b97-4f4a-abc2-a57ad06d9287", type:"Representation", name:decodeURL("ISO+26262-3%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+3%3A+Concept+phase"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68385.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"6e5746e6-24f0-480d-995c-6addbb80c5c6", contenttype:"Representation"});
+										dataElements.push({id:"6e5746e6-24f0-480d-995c-6addbb80c5c6", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+29119-1%3A2013+Software+and+systems+engineering+%E2%80%94+Software+testing+%E2%80%94+Part+1%3A+Concepts+and+definitions"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F45142.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"6eafd65e-4e99-4355-8f1c-3cd9cb675e47", contenttype:"Representation"});
+										dataElements.push({id:"6eafd65e-4e99-4355-8f1c-3cd9cb675e47", type:"Representation", name:decodeURL("ISO%2FIEC+26551%3A2016+Software+and+systems+engineering+%E2%80%94+Tools+and+methods+for+product+line+requirements+engineering"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F69530.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"6ff04528-a537-47a6-b456-eca18134a4a3", contenttype:"Representation"});
+										dataElements.push({id:"6ff04528-a537-47a6-b456-eca18134a4a3", type:"Representation", name:decodeURL("ISO%2FIEC+33002%3A2015+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Requirements+for+performing+process+assessment"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F54176.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"71ed2055-87d1-47f5-89b6-827574136c51", contenttype:"Representation"});
+										dataElements.push({id:"71ed2055-87d1-47f5-89b6-827574136c51", type:"Representation", name:decodeURL("ISO%2FIEC+33004%3A2015+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Requirements+for+process+reference%2C+process+assessment+and+maturity+models"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F54178.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"73e12939-4573-4e3d-970e-156ca31ec29f", contenttype:"Representation"});
+										dataElements.push({id:"73e12939-4573-4e3d-970e-156ca31ec29f", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748-1%3A2018+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+1%3A+Guidelines+for+life+cycle+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F72896.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"759c1195-a55f-4134-8180-71fe1bf2da45", contenttype:"Representation"});
+										dataElements.push({id:"759c1195-a55f-4134-8180-71fe1bf2da45", type:"Representation", name:decodeURL("ISO+26262-12%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+12%3A+Adaptation+of+ISO+26262+for+motorcycles"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F69605.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"86114964-425c-48cc-99f9-15e23c30370c", contenttype:"Representation"});
+										dataElements.push({id:"86114964-425c-48cc-99f9-15e23c30370c", type:"Representation", name:decodeURL("ISO+26262-6%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+6%3A+Product+development+at+the+software+level"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68388.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"8894a841-b9aa-4808-b591-39e82c547479", contenttype:"Representation"});
+										dataElements.push({id:"8894a841-b9aa-4808-b591-39e82c547479", type:"Representation", name:decodeURL("ISO%2FIEC+15026-3%3A2015+Systems+and+software+engineering+%E2%80%94+Systems+and+software+assurance+%E2%80%94+Part+3%3A+System+integrity+levels"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F64842.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"8f872a40-9374-4899-bd89-c5cc32e89374", contenttype:"Representation"});
+										dataElements.push({id:"8f872a40-9374-4899-bd89-c5cc32e89374", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+DIS+24748-3+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+3%3A+Guidelines+for+the+application+of+ISO%2FIEC%2FIEEE+12207+%28Software+life+cycle+processes%29"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F77698.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"91783b03-cb9c-4d42-a443-526cb43482d1", contenttype:"Representation"});
+										dataElements.push({id:"91783b03-cb9c-4d42-a443-526cb43482d1", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748-4%3A2016+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+4%3A+Systems+engineering+planning"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F56887.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"9698e65e-a6af-4f59-b0d9-850926063e1d", contenttype:"Representation"});
+										dataElements.push({id:"9698e65e-a6af-4f59-b0d9-850926063e1d", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748-5%3A2017+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+5%3A+Software+development+planning"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F60062.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"9ac8906a-677f-41df-abf4-bfb0b0af913e", contenttype:"Representation"});
+										dataElements.push({id:"9ac8906a-677f-41df-abf4-bfb0b0af913e", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+29148%3A2018+Systems+and+software+engineering+%E2%80%94+Life+cycle+processes+%E2%80%94+Requirements+engineering"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F72089.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"9b5ce749-4a9c-4365-87b1-37dc78f3aac2", contenttype:"Representation"});
+										dataElements.push({id:"9b5ce749-4a9c-4365-87b1-37dc78f3aac2", type:"Representation", name:decodeURL("ISO%2FIEC+TR+18018%3A2010+Information+technology+%E2%80%94+Systems+and+software+engineering+%E2%80%94+Guide+for+configuration+management+tool+capabilities"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F51042.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"a39408ab-2916-4a65-a046-f604685e7867", contenttype:"Representation"});
+										dataElements.push({id:"a39408ab-2916-4a65-a046-f604685e7867", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+15026-1%3A2019+Systems+and+software+engineering+%E2%80%94+Systems+and+software+assurance+%E2%80%94+Part+1%3A+Concepts+and+vocabulary"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F73567.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"a44821e8-6dbc-46f8-873b-20eb0449ea98", contenttype:"Representation"});
+										dataElements.push({id:"a44821e8-6dbc-46f8-873b-20eb0449ea98", type:"Representation", name:decodeURL("ISO%2FIEC+TR+24766%3A2009+Information+technology+%E2%80%94+Systems+and+software+engineering+%E2%80%94+Guide+for+requirements+engineering+tool+capabilities"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F51041.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"a6106157-5f0b-4c91-8204-57c6581f6b29", contenttype:"Representation"});
+										dataElements.push({id:"a6106157-5f0b-4c91-8204-57c6581f6b29", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24765%3A2017+Systems+and+software+engineering+%E2%80%94+Vocabulary"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F71952.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"a6fc4963-0826-4623-a77d-a5a9b80bcd6a", contenttype:"Representation"});
+										dataElements.push({id:"a6fc4963-0826-4623-a77d-a5a9b80bcd6a", type:"Representation", name:decodeURL("ISO%2FIEC+16085%3A2006+Systems+and+software+engineering+%E2%80%94+Life+cycle+processes+%E2%80%94+Risk+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F40723.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"b0d989a4-8c33-4ad7-b795-11218041100e", contenttype:"Representation"});
+										dataElements.push({id:"b0d989a4-8c33-4ad7-b795-11218041100e", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+16326%3A2019+Systems+and+software+engineering+%E2%80%94+Life+cycle+processes+%E2%80%94+Project+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F75276.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"b386e976-9a04-471e-a3d2-4f33db86fa56", contenttype:"Representation"});
+										dataElements.push({id:"b386e976-9a04-471e-a3d2-4f33db86fa56", type:"Representation", name:decodeURL("ISO%2FIEC+14764%3A2006+Software+Engineering+%E2%80%94+Software+Life+Cycle+Processes+%E2%80%94+Maintenance"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F39064.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"b5b38baa-a957-46d7-8076-cd21fc28a0fc", contenttype:"Representation"});
+										dataElements.push({id:"b5b38baa-a957-46d7-8076-cd21fc28a0fc", type:"Representation", name:decodeURL("ISO+250**+-+Software+Quality"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F73436.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"b8d575ef-7193-4ceb-a84d-63dd7d01f888", contenttype:"Representation"});
+										dataElements.push({id:"b8d575ef-7193-4ceb-a84d-63dd7d01f888", type:"Representation", name:decodeURL("ISO+26262-9%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+9%3A+Automotive+safety+integrity+level+%28ASIL%29-oriented+and+safety-oriented+analyses"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68391.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"b933505c-bb5d-4965-8b5c-b1473d38f74a", contenttype:"Representation"});
+										dataElements.push({id:"b933505c-bb5d-4965-8b5c-b1473d38f74a", type:"Representation", name:decodeURL("ISO%2FIEC+15026-2%3A2011+Systems+and+software+engineering+%E2%80%94+Systems+and+software+assurance+%E2%80%94+Part+2%3A+Assurance+case"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F52926.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"ba42993c-4a20-4433-99d0-76cd0cbcea6a", contenttype:"Representation"});
+										dataElements.push({id:"ba42993c-4a20-4433-99d0-76cd0cbcea6a", type:"Representation", name:decodeURL("ISO+26262-4%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+4%3A+Product+development+at+the+system+level"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68386.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"bdd97dc0-ac7b-4ccc-99e7-ab2f55af06be", contenttype:"Representation"});
+										dataElements.push({id:"bdd97dc0-ac7b-4ccc-99e7-ab2f55af06be", type:"Representation", name:decodeURL("ISO%2FIEC+15026-4%3A2012+Systems+and+software+engineering+%E2%80%94+Systems+and+software+assurance+%E2%80%94+Part+4%3A+Assurance+in+the+life+cycle"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F59927.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"c64aba58-d4a1-4dbd-a34b-53ccd2e682b5", contenttype:"Representation"});
+										dataElements.push({id:"c64aba58-d4a1-4dbd-a34b-53ccd2e682b5", type:"Representation", name:decodeURL("ISO%2FIEC+26556%3A2018+Information+technology+%E2%80%94+Software+and+systems+engineering+%E2%80%94+Tools+and+methods+for+product+line+organizational+management"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43115.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"c6c5a0c0-6480-43af-8440-4016659b0fda", contenttype:"Representation"});
+										dataElements.push({id:"c6c5a0c0-6480-43af-8440-4016659b0fda", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748-2%3A2018+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+2%3A+Guidelines+for+the+application+of+ISO%2FIEC%2FIEEE+15288+%28System+life+cycle+processes%29"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F70816.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"cbc63ad3-7d15-4c27-acca-915a6cf17cf9", contenttype:"Representation"});
+										dataElements.push({id:"cbc63ad3-7d15-4c27-acca-915a6cf17cf9", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+29119-4%3A2015+Software+and+systems+engineering+%E2%80%94+Software+testing+%E2%80%94+Part+4%3A+Test+techniques"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F60245.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"cc790e5c-296a-42ad-bb99-421a2798d0ac", contenttype:"Representation"});
+										dataElements.push({id:"cc790e5c-296a-42ad-bb99-421a2798d0ac", type:"Representation", name:decodeURL("ISO%2FIEC+33001%3A2015+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Concepts+and+terminology"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F54175.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"d0a44b4b-7b50-4a0b-9246-8b2f818b53ae", contenttype:"Representation"});
+										dataElements.push({id:"d0a44b4b-7b50-4a0b-9246-8b2f818b53ae", type:"Representation", name:decodeURL("ISO+26262-7%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+7%3A+Production%2C+operation%2C+service+and+decommissioning"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68389.html%0D%0A")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"d568ee27-abfd-43f2-a671-545f710bf2f2", contenttype:"Representation"});
+										dataElements.push({id:"d568ee27-abfd-43f2-a671-545f710bf2f2", type:"Representation", name:decodeURL("ISO%2FIEC+26557%3A2016+Software+and+systems+engineering+%E2%80%94+Methods+and+tools+for+variability+mechanisms+in+software+and+systems+product+line"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43116.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"d5a05e89-3671-4b76-8462-519d51c8edbe", contenttype:"Representation"});
+										dataElements.push({id:"d5a05e89-3671-4b76-8462-519d51c8edbe", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+21839%3A2019+Systems+and+software+engineering+%E2%80%94+System+of+systems+%28SoS%29+considerations+in+life+cycle+stages+of+a+system"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F71955.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"d6299b13-0877-470b-ad97-6c0d923579e8", contenttype:"Representation"});
+										dataElements.push({id:"d6299b13-0877-470b-ad97-6c0d923579e8", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+29119-3%3A2013+Software+and+systems+engineering+%E2%80%94+Software+testing+%E2%80%94+Part+3%3A+Test+documentation"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F56737.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"d64164b9-4347-4295-9028-4bb8d1cb703b", contenttype:"Representation"});
+										dataElements.push({id:"d64164b9-4347-4295-9028-4bb8d1cb703b", type:"Representation", name:decodeURL("ISO+26262-1%3A2018+Road+vehicles+%E2%80%94+Functional+safety+%E2%80%94+Part+1%3A+Vocabulary"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F68383.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"d822123a-4d0c-4be8-92c7-e3e8aea88f5f", contenttype:"Representation"});
+										dataElements.push({id:"d822123a-4d0c-4be8-92c7-e3e8aea88f5f", type:"Representation", name:decodeURL("ISO%2FIEC+TS+24748-6%3A2016+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+6%3A+System+integration+engineering"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F66433.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"df023968-3680-4a03-ac27-ae9d1c8857af", contenttype:"Representation"});
+										dataElements.push({id:"df023968-3680-4a03-ac27-ae9d1c8857af", type:"Representation", name:decodeURL("ISO%2FIEC+26558%3A2017+Software+and+systems+engineering+%E2%80%94+Methods+and+tools+for+variability+modelling+in+software+and+systems+product+line"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F43117.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"e0a3939e-355c-4784-b896-b376ade6b868", contenttype:"Representation"});
+										dataElements.push({id:"e0a3939e-355c-4784-b896-b376ade6b868", type:"Representation", name:decodeURL("ISO%2FIEC+TS+30103%3A2015+Software+and+Systems+Engineering+%E2%80%94+Lifecycle+Processes+%E2%80%94+Framework+for+Product+Quality+Achievement"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F53223.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"e23280b1-8ad5-46ac-962f-75f8ad550e58", contenttype:"Representation"});
+										dataElements.push({id:"e23280b1-8ad5-46ac-962f-75f8ad550e58", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+15289%3A2019+Systems+and+software+engineering+%E2%80%94+Content+of+life-cycle+information+items+%28documentation%29"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F74909.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"e50c078f-801e-48dd-ab31-902376c01e20", contenttype:"Representation"});
+										dataElements.push({id:"e50c078f-801e-48dd-ab31-902376c01e20", type:"Representation", name:decodeURL("IEEE+828-2012+Standard+for+Configuration+Management+in+Systems+and+Software+Engineering"), documentation:decodeURL("https%3A%2F%2Fstandards.ieee.org%2Fstandard%2F828-2012.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"e7aa0d68-b67e-4008-bac5-86756bbd807c", contenttype:"Representation"});
+										dataElements.push({id:"e7aa0d68-b67e-4008-bac5-86756bbd807c", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+90003%3A2018+Software+engineering+%E2%80%94+Guidelines+for+the+application+of+ISO+9001%3A2015+to+computer+software"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F74348.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"e9be4a32-7dd7-453f-96c0-68be75fbc2ff", contenttype:"Representation"});
+										dataElements.push({id:"e9be4a32-7dd7-453f-96c0-68be75fbc2ff", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748-8+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+8%3A+Technical+reviews+and+audits+on+defense+programs"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F75405.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"ea515776-dad1-4fb1-9980-fb252ad26fb8", contenttype:"Representation"});
+										dataElements.push({id:"ea515776-dad1-4fb1-9980-fb252ad26fb8", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+12207%3A2017+Systems+and+software+engineering+%E2%80%94+Software+life+cycle+processes"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F63712.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"ee3f4c54-f243-4ae0-836a-f72d857c1e32", contenttype:"Representation"});
+										dataElements.push({id:"ee3f4c54-f243-4ae0-836a-f72d857c1e32", type:"Representation", name:decodeURL("ISO%2FIEC%2FIEEE+24748-7%3A2019+Systems+and+software+engineering+%E2%80%94+Life+cycle+management+%E2%80%94+Part+7%3A+Application+of+systems+engineering+on+defense+programs"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F75404.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"f336d3e3-dcf8-4a2b-93e7-5b22256c0441", contenttype:"Representation"});
+										dataElements.push({id:"f336d3e3-dcf8-4a2b-93e7-5b22256c0441", type:"Representation", name:decodeURL("ISO%2FIEC+TR+33015%3A2019+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Guidance+for+process+risk+determination"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F55106.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"f3e6f326-c7af-4b8e-ac90-d77d3daf3319", contenttype:"Representation"});
+										dataElements.push({id:"f3e6f326-c7af-4b8e-ac90-d77d3daf3319", type:"Representation", name:decodeURL("EIA649C+Configuration+Management+Standard"), documentation:decodeURL("https%3A%2F%2Fwww.sae.org%2Fstandards%2Fcontent%2Feia649c%2F")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"f47c74cc-5664-4d70-8f41-f16f993287b7", contenttype:"Representation"});
+										dataElements.push({id:"f47c74cc-5664-4d70-8f41-f16f993287b7", type:"Representation", name:decodeURL("ISO%2FIEC+265**+-+Tools+and+Methods+for+Product+Line"), documentation:decodeURL("See+view+%222+-+ISO%2FIEC+265**+Tools+and+methods+for+product+line%22")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"f4ee8689-7bbf-4138-8b2a-2bf427a4aef6", contenttype:"Representation"});
+										dataElements.push({id:"f4ee8689-7bbf-4138-8b2a-2bf427a4aef6", type:"Representation", name:decodeURL("ISO%2FIEC+33020%3A2019+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Process+measurement+framework+for+assessment+of+process+capability"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F78526.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"f7d0cbf5-9134-4dd9-977c-fe9b3508021c", contenttype:"Representation"});
+										dataElements.push({id:"f7d0cbf5-9134-4dd9-977c-fe9b3508021c", type:"Representation", name:decodeURL("ISO%2FIEC+TS+15504-10%3A2011+Information+technology+%E2%80%94+Process+assessment+%E2%80%94+Part+10%3A+Safety+extension"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F54537.html")});
+									dataFoldersContent.push({folderid:"0b49175a-1ea9-431d-b985-f3d95e6237a2", contentid:"fcb546d7-a166-44ed-917f-ccb289ccf28b", contenttype:"Representation"});
+										dataElements.push({id:"fcb546d7-a166-44ed-917f-ccb289ccf28b", type:"Representation", name:decodeURL("ISO%2FSAE+DIS+21434+Road+vehicles+%E2%80%94+Cybersecurity+engineering"), documentation:decodeURL("https%3A%2F%2Fwww.iso.org%2Fstandard%2F70918.html")});
+													dataProperties.push({conceptid:"fcb546d7-a166-44ed-917f-ccb289ccf28b", propkey:decodeURL("ELib"), propvalue:decodeURL("false")});
+
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"fbd9c74b-8cde-4113-a2dd-9aeac489ea1a", contenttype:"Folder"});
+								dataFolders.push({id:"fbd9c74b-8cde-4113-a2dd-9aeac489ea1a", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"8b6167c9-de86-49a2-a907-2a0a3d909dee", contenttype:"Folder"});
+								dataFolders.push({id:"8b6167c9-de86-49a2-a907-2a0a3d909dee", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"d2dc2cac-0782-4252-83e6-db43396a408c", contenttype:"Folder"});
+								dataFolders.push({id:"d2dc2cac-0782-4252-83e6-db43396a408c", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"22a3446e-d697-4c61-8d0d-6ec7886faaf2", contenttype:"Folder"});
+								dataFolders.push({id:"22a3446e-d697-4c61-8d0d-6ec7886faaf2", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contenttype:"Folder"});
+								dataFolders.push({id:"84263e0e-2045-40a7-850b-bdce8f75f8a6", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"102757bf-af64-43a4-93a1-f6927d4a8286", contenttype:"Grouping"});
+										dataElements.push({id:"102757bf-af64-43a4-93a1-f6927d4a8286", type:"Grouping", name:decodeURL("Supplimental+Guidance"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"2635eb15-7525-4454-9fe1-2ae4a8bbf5c8", contenttype:"Grouping"});
+										dataElements.push({id:"2635eb15-7525-4454-9fe1-2ae4a8bbf5c8", type:"Grouping", name:decodeURL("Tools"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"79b1933b-9bc1-47bd-948c-4821583c7632", contenttype:"Grouping"});
+										dataElements.push({id:"79b1933b-9bc1-47bd-948c-4821583c7632", type:"Grouping", name:decodeURL("Life+Cycle+Processes+Standards"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"7b61770d-d877-492c-96d9-2b1f563ebe00", contenttype:"Grouping"});
+										dataElements.push({id:"7b61770d-d877-492c-96d9-2b1f563ebe00", type:"Grouping", name:decodeURL("Governance+and+Assessment"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"853d8422-6671-42e7-aacd-2d3a519b3994", contenttype:"Grouping"});
+										dataElements.push({id:"853d8422-6671-42e7-aacd-2d3a519b3994", type:"Grouping", name:decodeURL("Foundation+Standards"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"91fa5106-e9cd-4dcf-80ec-ec1a42c43097", contenttype:"Grouping"});
+										dataElements.push({id:"91fa5106-e9cd-4dcf-80ec-ec1a42c43097", type:"Grouping", name:decodeURL("System+of+Systems+%28SoS%29"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"dd6360ce-c488-436f-99db-e82ec42c0671", contenttype:"Grouping"});
+										dataElements.push({id:"dd6360ce-c488-436f-99db-e82ec42c0671", type:"Grouping", name:decodeURL("Artifact+Descriptions"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", contenttype:"Grouping"});
+										dataElements.push({id:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", type:"Grouping", name:decodeURL("Process+Elaboration+Standards"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"84263e0e-2045-40a7-850b-bdce8f75f8a6", contentid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", contenttype:"Grouping"});
+										dataElements.push({id:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", type:"Grouping", name:decodeURL("Application+Guides"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contenttype:"Folder"});
+								dataFolders.push({id:"80a42c2d-2287-4f54-8206-f7e343adaeba", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"0ca24dfe-0622-48ba-b5ae-aeb8d930b066", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"0ca24dfe-0622-48ba-b5ae-aeb8d930b066", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"48d379d9-2d25-40b4-90e4-ade3b2afa07a"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"0d11b02c-c272-4fdc-b857-00dd4afad888", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"0d11b02c-c272-4fdc-b857-00dd4afad888", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", targetid:"c6c5a0c0-6480-43af-8440-4016659b0fda"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"11429ede-d19c-4fa0-825b-be659470d90f", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"11429ede-d19c-4fa0-825b-be659470d90f", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"e50c078f-801e-48dd-ab31-902376c01e20"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"215bec65-9e7b-4c59-b73d-7bf72328cbae", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"215bec65-9e7b-4c59-b73d-7bf72328cbae", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", targetid:"e7aa0d68-b67e-4008-bac5-86756bbd807c"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"21cd15d2-c156-4b7e-8cad-aa83d6c22f34", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"21cd15d2-c156-4b7e-8cad-aa83d6c22f34", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"853d8422-6671-42e7-aacd-2d3a519b3994", targetid:"4c4ad222-017b-4c7a-85f1-f0313e159a73"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"21fce863-20f6-4c25-9703-41404a8d7f65", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"21fce863-20f6-4c25-9703-41404a8d7f65", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"52b0a285-fca5-42ae-9210-a89ece094cce"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2220593a-0889-4768-9cb2-6b43def1e2c7", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"2220593a-0889-4768-9cb2-6b43def1e2c7", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"2635eb15-7525-4454-9fe1-2ae4a8bbf5c8", targetid:"a44821e8-6dbc-46f8-873b-20eb0449ea98"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"27325956-395f-4cf8-9743-8066a282661e", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"27325956-395f-4cf8-9743-8066a282661e", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"6ff04528-a537-47a6-b456-eca18134a4a3"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2af5baff-cac9-41a5-9fdc-bf6518fbb8ca", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"2af5baff-cac9-41a5-9fdc-bf6518fbb8ca", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"68488f7f-a4d2-4496-8ecd-a8c2b958d5e5"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2b4cf171-0baa-4005-9d3e-5206fde68fd7", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"2b4cf171-0baa-4005-9d3e-5206fde68fd7", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"79b1933b-9bc1-47bd-948c-4821583c7632", targetid:"91783b03-cb9c-4d42-a443-526cb43482d1"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2c30b7b7-57fa-47bf-8199-8e8c7390d028", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"2c30b7b7-57fa-47bf-8199-8e8c7390d028", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"71ed2055-87d1-47f5-89b6-827574136c51"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2db7fec5-031e-49bb-bc02-5fa41cfa5460", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"2db7fec5-031e-49bb-bc02-5fa41cfa5460", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"d822123a-4d0c-4be8-92c7-e3e8aea88f5f"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"32fbcee4-c2fd-4061-afd9-e30594e60a90", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"32fbcee4-c2fd-4061-afd9-e30594e60a90", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"f336d3e3-dcf8-4a2b-93e7-5b22256c0441"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"34387239-719a-471a-abc3-a1e15df75550", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"34387239-719a-471a-abc3-a1e15df75550", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", targetid:"67455c6f-5744-4af7-bbeb-354aa05ec665"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"394a97e9-3a4a-4973-a38e-2e32fcbe7ade", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"394a97e9-3a4a-4973-a38e-2e32fcbe7ade", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"3ab34700-c061-49eb-9e02-123a0b49f582"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"3b403ced-6def-48bc-9ff5-ec0053deb014", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"3b403ced-6def-48bc-9ff5-ec0053deb014", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"91fa5106-e9cd-4dcf-80ec-ec1a42c43097", targetid:"083f4a41-6849-4887-864f-781546f11920"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"3c168a9f-2e1b-47fc-88ab-33eb161e54d3", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"3c168a9f-2e1b-47fc-88ab-33eb161e54d3", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"f3e6f326-c7af-4b8e-ac90-d77d3daf3319"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"3cfc15b2-ae96-4224-b7c0-ade5f4b2a61f", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"3cfc15b2-ae96-4224-b7c0-ade5f4b2a61f", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"853d8422-6671-42e7-aacd-2d3a519b3994", targetid:"35c71b52-9afb-4607-85da-cfb24d9d623d"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"4d8802b6-4849-4d9e-8f52-b54ea2dce6b8", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"4d8802b6-4849-4d9e-8f52-b54ea2dce6b8", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", targetid:"207c8877-ea22-4d87-85de-bd11a471f7cf"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"4d92545c-2807-4236-bcce-156eb82553cb", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"4d92545c-2807-4236-bcce-156eb82553cb", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"a39408ab-2916-4a65-a046-f604685e7867"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"4e316408-f80e-482f-9432-7d7d3b86ec98", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"4e316408-f80e-482f-9432-7d7d3b86ec98", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"1d14129b-bcda-4f80-8b13-ad0417051ba9"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"4ee4e0f7-30b0-4423-9885-8a7c56f5dd4e", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"4ee4e0f7-30b0-4423-9885-8a7c56f5dd4e", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", targetid:"5da3ce95-faac-4378-aa42-17dbd6c1c14c"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"5345c5db-ea7f-4475-a0d1-acbe8f5696f2", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"5345c5db-ea7f-4475-a0d1-acbe8f5696f2", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"bdd97dc0-ac7b-4ccc-99e7-ab2f55af06be"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"5af87cb6-7c88-4ac1-9f9d-8fadf7e5e1f5", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"5af87cb6-7c88-4ac1-9f9d-8fadf7e5e1f5", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"cc790e5c-296a-42ad-bb99-421a2798d0ac"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"5b2d95a6-bcdb-46f8-ac12-9e058d57534b", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"5b2d95a6-bcdb-46f8-ac12-9e058d57534b", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd6360ce-c488-436f-99db-e82ec42c0671", targetid:"5a558e1b-9ea6-4f48-8bec-cda831f857e0"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"63084d87-d933-4ecd-ae22-7ff5419913f3", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"63084d87-d933-4ecd-ae22-7ff5419913f3", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"79b1933b-9bc1-47bd-948c-4821583c7632", targetid:"9698e65e-a6af-4f59-b0d9-850926063e1d"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"6a4e4b78-4e0b-46c7-ae8f-ce5759e26b7b", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"6a4e4b78-4e0b-46c7-ae8f-ce5759e26b7b", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"28c2f6d9-2642-4b0c-ad9c-ba50f12488e2"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"6e276c44-7c1a-4b3c-b69e-655dba34e7b7", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"6e276c44-7c1a-4b3c-b69e-655dba34e7b7", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"102757bf-af64-43a4-93a1-f6927d4a8286", targetid:"1e31670d-0024-437d-bd2f-730241938136"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"6f2174ea-82d5-4e18-b388-6f42abfa1e58", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"6f2174ea-82d5-4e18-b388-6f42abfa1e58", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"2635eb15-7525-4454-9fe1-2ae4a8bbf5c8", targetid:"9b5ce749-4a9c-4365-87b1-37dc78f3aac2"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"70e274c5-1341-4db1-875e-88330a30db92", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"70e274c5-1341-4db1-875e-88330a30db92", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"9ac8906a-677f-41df-abf4-bfb0b0af913e"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"7b4871fa-4eb8-47c0-8636-a22ef9504891", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"7b4871fa-4eb8-47c0-8636-a22ef9504891", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"1e62a0b6-e429-473b-af64-e22548dfe824"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"7e2571ac-beb7-4e1d-bf76-86612df00b44", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"7e2571ac-beb7-4e1d-bf76-86612df00b44", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"6e5746e6-24f0-480d-995c-6addbb80c5c6"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"816f9c44-351f-442c-929f-e6c65ade5700", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"816f9c44-351f-442c-929f-e6c65ade5700", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"b933505c-bb5d-4965-8b5c-b1473d38f74a"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"8204e27a-8502-41ea-bb29-964602503f60", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"8204e27a-8502-41ea-bb29-964602503f60", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"853d8422-6671-42e7-aacd-2d3a519b3994", targetid:"a6106157-5f0b-4c91-8204-57c6581f6b29"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"8607645b-73d3-4081-a90c-0e1f2df4f6be", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"8607645b-73d3-4081-a90c-0e1f2df4f6be", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"121c6c07-4f0f-4f80-981b-8a094d8137b4"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"8c238f4b-99ea-4541-98cf-fbb5ba984f57", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"8c238f4b-99ea-4541-98cf-fbb5ba984f57", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"f4ee8689-7bbf-4138-8b2a-2bf427a4aef6"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"93a2f755-0e96-436a-bd10-3cc7dd7f5af6", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"93a2f755-0e96-436a-bd10-3cc7dd7f5af6", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"853d8422-6671-42e7-aacd-2d3a519b3994", targetid:"73e12939-4573-4e3d-970e-156ca31ec29f"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"96a7fc8c-8556-4436-a967-8b43f67e3339", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"96a7fc8c-8556-4436-a967-8b43f67e3339", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"13b9a07b-5287-4726-8e42-2d8d5ccc07b0"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"a2f43e0e-d7ab-4963-b564-04de19abdcec", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"a2f43e0e-d7ab-4963-b564-04de19abdcec", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"234a978f-037a-4950-9f13-0b9adf9ab274"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"b3803117-e740-4caf-94f0-90ebc3deebfe", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"b3803117-e740-4caf-94f0-90ebc3deebfe", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"91fa5106-e9cd-4dcf-80ec-ec1a42c43097", targetid:"d5a05e89-3671-4b76-8462-519d51c8edbe"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"b3f39244-b2c1-46c4-bdb4-3ab2745c120f", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"b3f39244-b2c1-46c4-bdb4-3ab2745c120f", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"2635eb15-7525-4454-9fe1-2ae4a8bbf5c8", targetid:"f47c74cc-5664-4d70-8f41-f16f993287b7"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"b68ff65d-3274-4c8e-a550-46fe4f0935c3", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"b68ff65d-3274-4c8e-a550-46fe4f0935c3", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"79b1933b-9bc1-47bd-948c-4821583c7632", targetid:"ea515776-dad1-4fb1-9980-fb252ad26fb8"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"b8005259-4a3b-48e0-be10-0746a575feb1", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"b8005259-4a3b-48e0-be10-0746a575feb1", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"8894a841-b9aa-4808-b591-39e82c547479"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"bebaaecb-17dc-4143-9818-56b2ae9fad76", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"bebaaecb-17dc-4143-9818-56b2ae9fad76", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"d6299b13-0877-470b-ad97-6c0d923579e8"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"c1998fb4-b4b7-4930-a6e2-0fcaf4afda84", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"c1998fb4-b4b7-4930-a6e2-0fcaf4afda84", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"79b1933b-9bc1-47bd-948c-4821583c7632", targetid:"20a13af3-a6b9-45bf-a418-a26d9100db4c"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"c42fb1c4-8533-4fc7-bc1a-62b02b2d8631", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"c42fb1c4-8533-4fc7-bc1a-62b02b2d8631", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"f7d0cbf5-9134-4dd9-977c-fe9b3508021c"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"ccdfd0a5-0a58-490c-a2c2-09a0e12aa1df", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"ccdfd0a5-0a58-490c-a2c2-09a0e12aa1df", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"cbc63ad3-7d15-4c27-acca-915a6cf17cf9"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"d2a2fa7a-46b6-4774-ba0c-afb4836cc8e7", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"d2a2fa7a-46b6-4774-ba0c-afb4836cc8e7", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"b5b38baa-a957-46d7-8076-cd21fc28a0fc"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"d6bf1063-0cec-4299-b191-39835ad27704", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"d6bf1063-0cec-4299-b191-39835ad27704", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7b61770d-d877-492c-96d9-2b1f563ebe00", targetid:"5be243b7-8f06-44cf-b0ee-aaddb70dfe10"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"e1d87fd2-0fb9-41ba-87ff-7f15796bea5e", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"e1d87fd2-0fb9-41ba-87ff-7f15796bea5e", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"0ecfc340-d071-4934-92c4-05a45e907db1"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"e3ad8b3d-b70b-4b1e-9d65-b91eeec6c609", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"e3ad8b3d-b70b-4b1e-9d65-b91eeec6c609", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"b386e976-9a04-471e-a3d2-4f33db86fa56"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"f4d17784-ec80-4980-b0b4-aaa0dee43346", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"f4d17784-ec80-4980-b0b4-aaa0dee43346", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"a6fc4963-0826-4623-a77d-a5a9b80bcd6a"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"fa6de829-9746-4d3f-88e5-50422419af6f", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"fa6de829-9746-4d3f-88e5-50422419af6f", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd8a8cd9-bba7-477d-a58b-dc6e2832a77c", targetid:"b0d989a4-8c33-4ad7-b795-11218041100e"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"fb67abc5-0f9d-4fb8-8c71-421fd446ee4a", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"fb67abc5-0f9d-4fb8-8c71-421fd446ee4a", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"e42e7413-6b82-4bfc-8da4-7ed1a406c64f", targetid:"e0a3939e-355c-4784-b896-b376ade6b868"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"ff378e93-07ef-459b-a144-b2daf34da6cc", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"ff378e93-07ef-459b-a144-b2daf34da6cc", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"dd6360ce-c488-436f-99db-e82ec42c0671", targetid:"e23280b1-8ad5-46ac-962f-75f8ad550e58"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"ffa701fb-a85a-4f19-9d7a-fe40eaf265aa", contenttype:"AggregationRelationship"});
+										dataRelationships.push({id:"ffa701fb-a85a-4f19-9d7a-fe40eaf265aa", type:"AggregationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"91fa5106-e9cd-4dcf-80ec-ec1a42c43097", targetid:"207c8877-ea22-4d87-85de-bd11a471f7cf"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2286a09e-2495-497f-971b-2a29e265257f", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"2286a09e-2495-497f-971b-2a29e265257f", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"c6c5a0c0-6480-43af-8440-4016659b0fda"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"28917977-c6df-4253-a8fb-c00a55334172", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"28917977-c6df-4253-a8fb-c00a55334172", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"3f7ff739-73eb-4c6e-9413-9c57340ed225"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"2ed57390-dc69-4b71-98cd-caaf497de292", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"2ed57390-dc69-4b71-98cd-caaf497de292", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"4aac85e1-a747-462e-ad65-7d7050afb3dd"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"3d289381-a1d4-4ff7-ae20-038ece648d04", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"3d289381-a1d4-4ff7-ae20-038ece648d04", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"5aa91705-a7b0-4dcd-ba3a-334ad6ebb5f6"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"3d9e2c9a-bfe8-4670-b152-97a17d35adfb", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"3d9e2c9a-bfe8-4670-b152-97a17d35adfb", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"73e12939-4573-4e3d-970e-156ca31ec29f"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"4da4aa55-02a6-4239-a1ed-3f9990e9ce20", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"4da4aa55-02a6-4239-a1ed-3f9990e9ce20", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"e9be4a32-7dd7-453f-96c0-68be75fbc2ff"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"4e61a08f-cb7e-46ab-9e5d-0d7474a53dd7", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"4e61a08f-cb7e-46ab-9e5d-0d7474a53dd7", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"4e70217e-01d7-4abf-8521-3fea45b814ec"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"53ead06e-cb89-4316-9e21-c2be1019c7f7", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"53ead06e-cb89-4316-9e21-c2be1019c7f7", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"6eafd65e-4e99-4355-8f1c-3cd9cb675e47"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"56a1e4c7-d515-40d3-82b2-04795d945c15", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"56a1e4c7-d515-40d3-82b2-04795d945c15", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"d568ee27-abfd-43f2-a671-545f710bf2f2"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"5cfba262-2e2e-4b6f-899d-a5a331451ab7", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"5cfba262-2e2e-4b6f-899d-a5a331451ab7", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"b8d575ef-7193-4ceb-a84d-63dd7d01f888"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"6026e1de-e6a6-4dfd-8608-9cfc223c5643", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"6026e1de-e6a6-4dfd-8608-9cfc223c5643", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"91783b03-cb9c-4d42-a443-526cb43482d1"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"6cc52935-a10b-4981-9dfd-fc931feed847", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"6cc52935-a10b-4981-9dfd-fc931feed847", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"12e78967-aa6f-4b30-9175-e4f70554db5b"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"7fbae229-41ba-4869-b044-14a1b2973e91", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"7fbae229-41ba-4869-b044-14a1b2973e91", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"0679a3dd-85c6-4031-987b-7b1582de2503"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"82cc12ee-34e6-4b19-ab82-2ca042748cb5", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"82cc12ee-34e6-4b19-ab82-2ca042748cb5", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"6a227850-dcb0-4531-b185-f11b9b263bb0"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"8fdd9b94-4b33-434c-968f-a4c3fb4c85aa", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"8fdd9b94-4b33-434c-968f-a4c3fb4c85aa", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"8f872a40-9374-4899-bd89-c5cc32e89374"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"94cb154d-7a68-4b17-8568-a8e868a0b4c2", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"94cb154d-7a68-4b17-8568-a8e868a0b4c2", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"d822123a-4d0c-4be8-92c7-e3e8aea88f5f"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"964c2c6f-487a-4c6f-815c-03825190f037", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"964c2c6f-487a-4c6f-815c-03825190f037", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"1e35da39-0b34-4685-adcc-132a75cf3696"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"a4caa0ce-68be-4be5-a596-b502d6824d67", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"a4caa0ce-68be-4be5-a596-b502d6824d67", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"ba42993c-4a20-4433-99d0-76cd0cbcea6a"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"a9136439-f59d-4675-889a-add8402c0b92", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"a9136439-f59d-4675-889a-add8402c0b92", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"67455c6f-5744-4af7-bbeb-354aa05ec665"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"bb92cb9d-8efb-423e-92d3-b9b316b44189", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"bb92cb9d-8efb-423e-92d3-b9b316b44189", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"d0a44b4b-7b50-4a0b-9246-8b2f818b53ae"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"cd1b22d7-f3c4-4657-a071-007e82e064fc", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"cd1b22d7-f3c4-4657-a071-007e82e064fc", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"560b3e2b-f7f7-4a72-8fe2-53231c8884a7"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"d0186e6c-3094-4233-9988-4f89d6ee6ba1", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"d0186e6c-3094-4233-9988-4f89d6ee6ba1", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"ee3f4c54-f243-4ae0-836a-f72d857c1e32"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"d074d29e-db38-4a26-89e9-4d8e804c05a0", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"d074d29e-db38-4a26-89e9-4d8e804c05a0", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"6356b8bb-4cde-4ffd-96a5-a5c413a18559"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"d1362082-4c82-4d15-9a19-a55c268900c7", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"d1362082-4c82-4d15-9a19-a55c268900c7", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"86114964-425c-48cc-99f9-15e23c30370c"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"db5ab097-1562-404b-9aca-980e76f77fb4", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"db5ab097-1562-404b-9aca-980e76f77fb4", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"04697cc1-40c8-42e2-80ae-7c3b8f3da38f", targetid:"9698e65e-a6af-4f59-b0d9-850926063e1d"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"e5213745-c8c8-4b2d-afae-e83869e0e3dc", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"e5213745-c8c8-4b2d-afae-e83869e0e3dc", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"c64aba58-d4a1-4dbd-a34b-53ccd2e682b5"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"e7bcaeba-fc56-4d66-93be-318eab834832", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"e7bcaeba-fc56-4d66-93be-318eab834832", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"6c1bfea6-5b97-4f4a-abc2-a57ad06d9287"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"e7dcc4df-2f80-4622-93da-7de0bd5b70a9", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"e7dcc4df-2f80-4622-93da-7de0bd5b70a9", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"52a6a969-bb1e-42ca-b446-f079f157fe69"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"f1a1cd0e-ebe1-42a5-932f-5d7bd6ed1344", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"f1a1cd0e-ebe1-42a5-932f-5d7bd6ed1344", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"d64164b9-4347-4295-9028-4bb8d1cb703b"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"f599d0c2-f659-4694-91ec-e789d36f5896", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"f599d0c2-f659-4694-91ec-e789d36f5896", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f47c74cc-5664-4d70-8f41-f16f993287b7", targetid:"df023968-3680-4a03-ac27-ae9d1c8857af"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"fd1d992e-48d9-4fce-ba15-535f9b9430b7", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"fd1d992e-48d9-4fce-ba15-535f9b9430b7", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"5eef100a-8782-4b46-9e4c-95c95daf1a94"});
+									dataFoldersContent.push({folderid:"80a42c2d-2287-4f54-8206-f7e343adaeba", contentid:"ff887d2e-55a6-4c97-baf2-dc315eaf4d1b", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"ff887d2e-55a6-4c97-baf2-dc315eaf4d1b", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"55cdc31f-e671-4a97-b313-e3684489dfe1", targetid:"759c1195-a55f-4134-8180-71fe1bf2da45"});
+
+								dataFoldersContent.push({folderid:"f29d6443-86f3-4938-a117-ca42f5e0e61f", contentid:"6cef6118-a73b-40e6-8441-63235a08ee9e", contenttype:"Folder"});
+								dataFolders.push({id:"6cef6118-a73b-40e6-8441-63235a08ee9e", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"6cef6118-a73b-40e6-8441-63235a08ee9e", contentid:"bf920227-bba2-4cf6-b629-a6db0477b5b3", contenttype:"Folder"});
+									dataFolders.push({id:"bf920227-bba2-4cf6-b629-a6db0477b5b3", type:"Folder", name:decodeURL("Standards"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"bf920227-bba2-4cf6-b629-a6db0477b5b3", contentid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"047d52c0-fb0b-4735-a92b-3e9c3840a473", type:"ArchimateDiagramModel", name:decodeURL("2+-+ISO%2FIEC+265**+Tools+and+methods+for+product+line"), documentation:decodeURL("Purpose+of+this+view%3A+detailed+description+of+ISO+265**+%22Methods+and+Tools+for+Product+Line%22+Standards+Family+contents%0D%0AUse+cases%3A%0D%0A-+open+web+page+with+standard+description+on+issuing+organisation+website+%28click+the+block%29%0D%0A-+open+standard+if+accessible+on+internal+e-library+%28click+on+dark+green+block%29%0D%0A%0D%0ACreated+by%3A+Alexander+Efremov%0D%0AUpdated+on%3A+25.02.2020+%28v.1%29%0D%0A")});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"cff7eef2-4e09-4b47-bc85-44019ecc86d2", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"7f0560e5-96b6-4ffe-beaa-89a7b8b94cda", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"3f34691f-8af3-4dc0-a7a2-994fbd3b5957", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"f75e0da6-9bf8-4ea6-a08b-2237bd910f81", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"195570c8-fea8-49b6-842e-2ba38787ebf8", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"e303d4fd-377e-4cfd-aa03-8eb3d913c83e", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"aa389923-92ae-4cf6-9879-d08c0eb85cb6", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"69ef0f73-93da-4ccd-9fc6-0f705a727c19", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"219424bb-e2f2-4379-897d-5267b709532f", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"2c6d0290-b6b4-41ed-a16d-ee698e4fa040", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"f6a235a4-5396-4c31-85c7-48df4fa359df", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"d870ed99-be3b-4f07-9431-8d70c6e45a6e", contenttype:"DiagramModelArchimateObject"});
+
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"bf871162-d544-4836-aae4-c3f21bb0ab7d", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"0ea70a9f-ff8c-49ad-b254-2b418668768a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"b57029d1-f87b-46fc-9341-1a08f00712c9", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"d454c55f-71d1-40d6-9fe1-7a09dd019d05", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"2c560b20-d932-4a67-9cc6-3a47ee7c6d4a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"4afdc4d0-e798-447a-a691-6224b5b745b2", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"d8de03a5-c014-4fcf-8c09-10ddaf9c7d2d", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"c1e83633-1419-4eb1-8686-cf51f277fc47", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"35a338aa-e244-40f9-863b-19655b7d157e", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"1f850968-a2cf-4442-ad17-ab77e94bfa13", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"047d52c0-fb0b-4735-a92b-3e9c3840a473", contentid:"e45920c8-1797-4c01-b3e1-d7ffb3b18f7e", contenttype:"DiagramModelArchimateConnection"});
+
+
+										dataFoldersContent.push({folderid:"bf920227-bba2-4cf6-b629-a6db0477b5b3", contentid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", type:"ArchimateDiagramModel", name:decodeURL("3+-+Safety+and+Security+Related"), documentation:decodeURL("Purpose+of+this+view%3A+detailed+description+of+systems+and+software+safety+and+security+related+standards%0D%0AUse+cases%3A%0D%0A-+open+web+page+with+standard+description+on+issuing+organisation+website+%28click+the+block%29%0D%0A-+open+standard+if+accessible+on+internal+e-library+%28click+on+dark+green+block%29%0D%0A%0D%0ACreated+by%3A+Alexander+Efremov%0D%0AUpdated+on%3A+25.02.2020+%28v.1%29%0D%0A")});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"8e4fe1a4-e307-474a-8904-74f29b346ec5", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"92cc3b2e-cb10-4534-b320-ef7e5b5d4143", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"96008c51-ee39-48eb-9e90-ee3ae44b3c9a", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"383cfcb9-a737-4458-b193-4039557a4715", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"7a22b1a2-4bdb-4335-b3bc-39d1a5ddc791", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"b6910748-0ad7-436a-8381-63959f3dd479", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"a5f75573-b458-4b84-a652-6dc3e804e774", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"e5acf88a-6f61-4df2-bb40-2a1bd8d1531f", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"23fda4c8-dc33-417d-adf3-2e4feaa43da2", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"e1b45f5f-29ea-478c-acf1-7e6cc17d42dc", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"19eb0d42-e8fa-46cd-a7b5-5b4228c0f7c1", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"818b52ea-4f21-4e31-9415-42c04df5a37b", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"550f4097-9032-4d84-962a-af8e149ea81d", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"56f75e0a-23a2-47eb-867b-1c107dfbebfe", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"497d4e0c-e4e2-45af-b4c0-211e21d255b0", contenttype:"DiagramModelArchimateObject"});
+
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"a1c10d2a-a0d2-40a9-bc3f-e6e435508b29", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"dcdca7f5-18cf-4171-9008-a38946105830", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"fc52d04a-6f78-4e0b-a1d7-c6c550ae0711", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"f19903f6-dab1-47ff-b5df-b5f86f8b52b2", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"c07e2480-5ea9-4456-b74e-ab79f563c715", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"d254538d-f449-4914-8875-89bf31573ace", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"8fa9090d-6b07-4045-9c1e-f7df3345e445", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"4971471a-5295-4bbe-b3be-eaf35fef1a98", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"3e0a271f-405f-422d-9c31-e6dfa2c509e6", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"a68e08ab-9580-42d0-a008-ad2a5772e6c1", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"599ea806-739e-499e-8154-a698226db7e8", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"056d7d6d-a62f-41e7-8730-48cd76fc5aba", contentid:"adccebe0-eb63-4eec-a5cb-f42ee66f5a49", contenttype:"DiagramModelArchimateConnection"});
+
+
+										dataFoldersContent.push({folderid:"bf920227-bba2-4cf6-b629-a6db0477b5b3", contentid:"6005eccd-a428-467e-af45-58d515f00fb6", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"6005eccd-a428-467e-af45-58d515f00fb6", type:"ArchimateDiagramModel", name:decodeURL("0+-+List+of+Standards+and+Handbooks"), documentation:decodeURL("Purpose+of+this+view%3A+summary+of+Systems+and+Software+Engineering+related+standards+and+handbooks%0D%0AUse+cases%3A%0D%0A-+open+web+page+with+standard+description+on+issuing+organisation+website+%28click+the+block%29%0D%0A%0D%0AUsed+sources%3A%0D%0AGarry+Roedler+%E2%80%9CThe+Evolution+of+Systems+Engineering+Standards+and+Practices%E2%80%9D%2C+2014%0D%0Ahttps%3A%2F%2Fyoutu.be%2FtKsWGzoh9cs%3Ft%3D527+%0D%0A%0D%0ACreated+by%3A+Alexander+Efremov%0D%0AUpdated+on%3A+25.02.2020+%28v.1%29")});
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"8af29d1c-c108-475b-85cd-c65c33f3597f", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"f4c20ba8-f166-4fda-bb43-a69c8db9edb7", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"34ee1a00-0f74-413f-8589-33e13aa4739f", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d8a3dcf5-1300-47cf-aa76-0cc3943694de", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2444ddca-4519-48fa-b49e-a9f4da8372ae", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"74e1ae70-9815-4b50-8174-130a2914be4f", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"5b4e6c28-0312-407c-8791-c566bb143833", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"1a0d66a4-e208-49c4-befc-536635a1dd4d", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"021fd463-a563-4799-a70d-5eb91f728fb4", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2fd8f9ad-c2ef-4b81-9664-9e224ed5498e", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"78637ae2-08a7-4ce2-8268-ae7381feebd3", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"7cd519a7-62b2-497e-afc8-4ff20e09aa30", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"e4bfd42f-ffd1-4d86-bc64-ee0bd2c9476c", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"e27cb777-e95d-41a1-97ee-6a7d25fccc94", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"8523e3d7-28fa-484e-b27b-ee83ead6cc6a", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"a47b9f0f-be63-4a5a-b2c4-31978dafb08e", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"8dcaefb8-8100-42e3-b50f-27242b2c9524", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"c0561f7d-1346-4c9c-b986-39d8c9459119", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"43645f8e-5720-4c23-b9ed-f49fdff90a87", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"6e1f3579-924d-44d9-8148-cd8288acd2d3", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"b48adef7-d165-40f0-9cf9-d6b41a42a891", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"14f22590-00ee-467d-a789-d4c72f668025", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"9a9b70da-f350-4eb6-b06d-bbfb5015f766", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"a6d3b104-31e9-478a-85ac-dac53cebb780", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"600edbca-3f3a-4f4d-9444-d85dbded2feb", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"c672c3cd-c32b-4d14-8dc8-86ebef1bb470", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"deabf36e-c3eb-4a59-acb1-c9025176e6c8", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"ad22d195-2059-4e2f-81de-bb3f196164a5", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"271a9b14-ee72-404a-a7f8-409aff438351", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"a945c5cb-0ab2-449a-b2ae-9a3148e7e280", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"e63d13e8-b75d-40ca-be06-e064bea42956", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"4215bc2d-552e-41f5-b22c-1579abc2c250", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d86d2541-271e-41ae-89dc-615a7053d815", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"c93cc2aa-a2f3-4b51-8855-4fd2b214896b", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3b66e7d7-6971-4cbd-b8dd-c604e3c70a36", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"acb92909-4493-489f-9e45-41950eb676fa", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"6e26a636-5730-4834-ac00-72fe80bb9314", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"82180fad-6e01-4763-974a-b4749eb57d87", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"f1719dbb-214e-4f75-ba17-b540ac50d3a1", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"18ca508b-0948-44b2-8697-61c4e049584b", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"7546bb35-9efc-4b46-90e6-aece37108d97", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"17a53635-ffc6-42f6-b224-decdfe67f146", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"001774cb-8a3e-4c22-ba65-c02fa6a33190", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"b49a867e-8c64-4544-8361-4e90ddc94079", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"bab1614b-d38c-4e7b-aad8-c761a8ef00ee", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"9a47cc1c-5f66-4306-a6d1-60e5c821fd0c", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"48b6d2a8-4646-4572-9901-0cbdd112fe8f", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"cefe8e7f-1b02-4874-93ba-327cecc1f63f", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d41efe8b-1ec1-4da1-acf6-33f4180898e8", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"93d62a6c-0249-4bb8-bdb6-097f535992df", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"aa5dce5d-b15f-45c4-8543-a7f94b7d7c49", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"61b6807b-9dab-40eb-a5f4-a6a9e3b90d39", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2b110353-0f39-49bb-91ed-7253b41c39c9", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"08a20514-f14e-4d4b-b6dc-8520f3bee49b", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"6dbd999f-7696-4508-a8ed-394628104fd1", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"63a14196-e2d1-4edb-8d9c-9d8465972518", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"5cfa71da-5297-4a49-b9cf-201dff1b9061", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2d2b8d76-e9b2-4bfc-b013-32f52099cb29", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"52cfe3e0-d805-4d8e-908b-a676a1c1157b", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"bab8c08d-7287-4e98-8bbd-a5516ed54085", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"88f63b44-e8ff-42a7-94b0-44bd75b632d7", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"0122977b-fb0a-4849-8a52-262bf5fa8e40", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"0f6cf236-2362-4cdd-b262-c9c6965dc018", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"947776ac-99d0-41e7-926e-b87ca9ea9cd2", contenttype:"DiagramModelArchimateObject"});
+													
+
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2c87c285-fb6d-4df1-b083-eb7d77ccd46a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"1476522a-31d0-472b-a094-b7f346e3f6e4", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"406d46c1-c66b-481d-93e2-7eb172df8047", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"ec0df9e1-0db5-4eeb-994b-de266e51f172", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"db6513c1-b03b-4f0e-b596-33b8cd8ef435", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"fe46848d-6cf0-4c7d-97b2-0497c0d5a865", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"898b3885-26e7-4c76-b3cc-e9b42e1e34b5", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3524f385-6fe6-4c30-bb10-0c83c1d64896", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2c5f5051-0ca8-4327-b2f5-5d6de993e1ca", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"aaf5dde2-fa9f-41d2-9ae1-face8cd37f01", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"a52f55b2-2239-49d5-a679-d69d0ad18c64", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"da86b5c1-3f0a-4dc9-8a76-da1ad229455d", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"654e517a-0328-404d-9f4c-a2387da285da", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"853ac388-d0b8-4c1d-9cd1-4d6425a7629e", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2a3b854f-af64-49f9-bb0d-4699c678ad05", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d2975fab-b7da-4098-a4fa-2147be41bbc0", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3b95e504-1453-418e-88fe-544d71ec5b8b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"b826a776-939e-4646-a781-79824165dd6b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"0622187d-f62c-4592-b175-9a1cdf8b45de", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"763e4e49-0757-47d6-b226-efc1b3c7a51a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"a8f26d9c-611b-4f93-ba53-6c50d5dcb301", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"c52f692b-f98f-4192-b9d4-df53777290bd", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d896d0ff-f3ab-471d-b75e-e0be38418e5b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"13d16a40-556c-4d96-94a9-792c0031a29e", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d9ae19cf-9c30-420d-80e8-39c8a7664632", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3e1f7695-b141-4f4b-948d-190c00ce978b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2631362a-1b06-4e9c-8cc4-7429b5910bdc", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"e6fa7ead-dfdb-4009-954e-c6c22d6a3e8a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"bf6396b9-e665-4421-92e7-c4fec2f78523", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"ba259df3-6010-4bdb-92fb-509643dfba8b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"9c24de00-2f95-4c43-9289-60286d606b9a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"30b40f96-ac43-4bde-8fbc-690e14d98c5c", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"ec7c30e2-b424-4aaa-a361-398392259d99", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"9785a359-709d-4a82-99c2-1a415f918c50", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"374183d0-0ef9-4ed7-9b69-a78d6282dd56", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3b436634-7800-4ce2-995f-b7f99e037f5c", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"51ba3950-ac98-4d94-864f-426f8b5f5989", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"d10d6b49-3c09-47c9-be27-4541f0543bf7", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"6fae50ca-de2e-4336-bf26-1593a2839fc1", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3063e974-9d8a-4076-b938-de986bd26e8b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"9a3250d8-a8dc-42e2-a5f7-6ff86f3c2184", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"bfe5d262-950d-490c-b1b3-2cb86ade787d", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"26b71b70-b94f-4d24-9a69-a1ebc1741815", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"5a396b51-4db5-4f32-a833-a15cceb203b7", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"0f1a4a66-29d7-49a1-98fc-efb08d45ab80", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"f47dbefb-7f0f-426b-8714-4af3fd30dadb", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"9c7ca329-f753-4d90-bdb0-2837c5976e19", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"da0dfdcb-565a-432a-bcc8-a18b69c98982", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"2bd0a9a3-526f-4c8b-a947-ee638a08d7b0", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"edff6af4-b591-4f0a-beb6-db1b1cf6498a", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"205ec8af-06f1-4d00-a66f-c8c89b6e1964", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"3e133b2a-bc10-48f8-920f-8ed1b2ba29a9", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"a2e619a5-8c54-49fe-883a-89b17b9c6e89", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"cab244af-7003-4a80-98ce-25078801285e", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"e404431c-e3d9-4386-8bcd-7b22785ec2e2", contenttype:"DiagramModelArchimateConnection"});
+
+													
+																			dataViewsContent.push({viewid:"6005eccd-a428-467e-af45-58d515f00fb6", contentid:"780c8ef5-1128-4f27-92c1-e159f7e49a65", contenttype:"DiagramModelArchimateConnection"});
+
+													
+
+										dataFoldersContent.push({folderid:"bf920227-bba2-4cf6-b629-a6db0477b5b3", contentid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", type:"ArchimateDiagramModel", name:decodeURL("1+-+ISO%2FIEC%2FIEEE+24748%3A2018+Systems+and+software+engineering+%E2%80%94+Life+cycle+management"), documentation:decodeURL("Purpose+of+this+view%3A+detailed+description+of+ISO+24748+Standards+Family+contents%0D%0AUse+cases%3A%0D%0A-+open+web+page+with+standard+description+on+issuing+organisation+website+%28click+the+block%29%0D%0A-+open+standard+if+accessible+on+internal+e-library+%28click+on+dark+green+block%29%0D%0A%0D%0ACreated+by%3A+Alexander+Efremov%0D%0AUpdated+on%3A+25.02.2020+%28v.1%29%0D%0A")});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"11d62b59-94ca-46c6-9a33-d19061da5ad1", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"8f091938-d952-4f23-99a8-cb8ae9e9d42f", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"f213a2a4-728e-4c9d-ad52-6d6041ad672c", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"e1de61c5-9741-4456-bdce-a7c6135fc9ba", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"e0e0c11d-147f-47a1-98f8-b06729c4efb1", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"5f3af5b2-b392-4928-95f4-e3f2050b6299", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"b6b36f58-7ad6-4bdd-9781-63d0f51f5dfd", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"3c2088b5-b41e-42f1-a256-664f315e31c7", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"bf575a5e-01d0-4e0b-9768-5c3faae18c8d", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"c4adc96c-ce14-44dd-b578-e3378d80d2af", contenttype:"DiagramModelArchimateObject"});
+
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"d55fb022-9004-4d57-a6ae-d0773d22e80c", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"fc270704-4292-4133-b45a-13eec4c91adf", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"51c857af-4b5f-4a3f-a903-95220f7f17be", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"b4cb19fd-47e5-4791-aab5-c05955ed2d65", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"dcad9eae-6380-4dd5-b010-3fdf9cfe744c", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"92ae0162-8778-4db4-b14a-8292eab7ad9b", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"6225e3d1-50ba-45f4-8235-06a985eec182", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"4f1defdc-cad6-4f08-a039-c4de795c294e", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"a7c78af8-58f7-414a-a4e2-03326f5bd10c", contentid:"7855302e-53aa-4f5c-9339-bc2db1702873", contenttype:"DiagramModelArchimateConnection"});
+
+
+
+									dataFoldersContent.push({folderid:"6cef6118-a73b-40e6-8441-63235a08ee9e", contentid:"f24ea292-5a25-410b-8a1e-ae8df429c837", contenttype:"Folder"});
+									dataFolders.push({id:"f24ea292-5a25-410b-8a1e-ae8df429c837", type:"Folder", name:decodeURL("Readme"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"f24ea292-5a25-410b-8a1e-ae8df429c837", contentid:"_ZeJg0FfFEeqiKd9sm1cmEw", contenttype:"CanvasModel"});
+											dataViews.push({id:"_ZeJg0FfFEeqiKd9sm1cmEw", type:"CanvasModel", name:decodeURL("Readme"), documentation:decodeURL("")});
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
