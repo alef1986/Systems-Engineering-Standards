@@ -101,7 +101,7 @@
       xsi:type="archimate:DiagramModelArchimateObject"
       id="8f091938-d952-4f23-99a8-cb8ae9e9d42f"
       targetConnections="d55fb022-9004-4d57-a6ae-d0773d22e80c"
-      fillColor="#00ff00">
+      fillColor="#e6ffe6">
     <bounds
         x="10"
         y="84"
@@ -115,7 +115,7 @@
       xsi:type="archimate:DiagramModelArchimateObject"
       id="f213a2a4-728e-4c9d-ad52-6d6041ad672c"
       targetConnections="fc270704-4292-4133-b45a-13eec4c91adf"
-      fillColor="#00ff00">
+      fillColor="#e6ffe6">
     <bounds
         x="10"
         y="180"
@@ -145,7 +145,8 @@
   <children
       xsi:type="archimate:DiagramModelArchimateObject"
       id="e0e0c11d-147f-47a1-98f8-b06729c4efb1"
-      targetConnections="b4cb19fd-47e5-4791-aab5-c05955ed2d65 71ee49fa-7c29-4791-b1ad-955d6606aa1c">
+      targetConnections="b4cb19fd-47e5-4791-aab5-c05955ed2d65 71ee49fa-7c29-4791-b1ad-955d6606aa1c"
+      fillColor="#e6ffe6">
     <bounds
         x="358"
         y="84"
@@ -240,7 +241,7 @@
       xsi:type="archimate:DiagramModelNote"
       id="23e04255-98f8-4c43-afea-f03d637c6b16"
       textAlignment="1"
-      content="Purpose of this view: detailed description of ISO 24748 Standards Family contents&#xD;&#xA;Use cases:&#xD;&#xA;- open web page with standard description on issuing organisation website (click the block)&#xD;&#xA;- open standard if accessible on internal e-library (click on dark green block)&#xD;&#xA;&#xD;&#xA;Created by: Alexander Efremov&#xD;&#xA;Updated on: 25.02.2020 (v.1)&#xD;&#xA;">
+      content="Purpose of this view: detailed description of ISO 24748 Standards Family contents&#xD;&#xA;Use cases:&#xD;&#xA;- open web page with standard description on issuing organisation website (click the block)&#xD;&#xA;&#xD;&#xA;Created by: Alexander Efremov&#xD;&#xA;Updated on: 25.02.2020 (v.1)&#xD;&#xA;">
     <bounds
         x="996"
         y="24"
